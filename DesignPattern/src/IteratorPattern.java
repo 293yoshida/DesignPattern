@@ -10,26 +10,11 @@ public class IteratorPattern {
 
 
 
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+class Student{
+	public Student() {
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
 }
