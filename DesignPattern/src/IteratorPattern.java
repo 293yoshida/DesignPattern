@@ -104,9 +104,56 @@ interface Iterator{
 }
 
 
+class MyStudentList extends StudentList implements Aggregate{
+
+	public MyStudentList() {
+		// TODO 自動生成されたコンストラクター・スタブ
+		super();
+	}
+
+	public MyStudentList(int studentCount) {
+		// TODO 自動生成されたコンストラクター・スタブ
+		super(studentCount);
+	}
+
+	@Override
+	public Iterator iterator() {
+		// TODO 自動生成されたメソッド・スタブ
+		return null;
+	}
+}
+
+class MyStudentListIterator implements Iterator{
+	private MyStudentList myStudentList;
+	private int index;
+
+	public MyStudentListIterator(MyStudentList list) {
+		// TODO 自動生成されたコンストラクター・スタブ
+		this.myStudentList = list;
+		this.index = 0;
+	}
 
 
+	@Override
+	public boolean hasNext() {
+		// TODO 自動生成されたメソッド・スタブ
+		if(myStudentList.size() > index){
+			return true;
+		}else{
+			return false;
+		}
+	}
 
+	@Override
+	public Object next() {
+		// TODO 自動生成されたメソッド・スタブ
+		Student s = myStudentList.get(index);
+		index++;
+
+		return s;
+	}
+
+}
 
 
 
