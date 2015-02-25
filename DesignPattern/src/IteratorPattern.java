@@ -5,11 +5,6 @@ public class IteratorPattern {
 	private static final Logger log = LoggerFactory
 			.getLogger(IteratorPattern.class);
 
-
-
-
-
-
 }
 
 
@@ -50,8 +45,55 @@ class StudentList{
 		last++;
 	}
 
+	public Student get(int num){
+		return students[num];
+	}
+
 	public int size(){
 		return this.last;
 	}
 
 }
+
+
+abstract class Teacher{
+    protected StudentList studentList;
+
+    public abstract void createStudentList();
+    public abstract void callStudents();
+}
+
+
+class MyTeacher extends Teacher{
+	private StudentList studentList;
+
+
+	public MyTeacher() {
+		// TODO 自動生成されたコンストラクター・スタブ
+		studentList = new StudentList(5);
+	}
+
+	@Override
+	public void createStudentList() {
+		// TODO 自動生成されたメソッド・スタブ
+		studentList.add(new Student("赤井亮太", 1));
+		studentList.add(new Student("赤羽里美", 0));
+		studentList.add(new Student("岡田美央", 0));
+		studentList.add(new Student("西森俊介", 1));
+		studentList.add(new Student("中ノ森玲奈", 0));
+	}
+
+	@Override
+	public void callStudents() {
+		// TODO 自動生成されたメソッド・スタブ
+		for(int i=0; i<studentList.size(); i++){
+			System.out.println("名前:" + studentList.get(i).getName());
+		}
+	}
+
+}
+
+
+
+
+

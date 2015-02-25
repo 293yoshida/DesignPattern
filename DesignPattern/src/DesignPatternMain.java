@@ -9,6 +9,10 @@ public class DesignPatternMain {
 		// TODO 自動生成されたメソッド・スタブ
 
 
+		Teacher you = new MyTeacher();
+		you.createStudentList();
+		you.callStudents();
+
 
 	}
 }
