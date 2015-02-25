@@ -94,6 +94,30 @@ class MyTeacher extends Teacher{
 }
 
 
+interface Aggregate{
+	public Iterator iterator();
+}
+
+interface Iterator{
+	public boolean hasNext();
+	public Object next();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
